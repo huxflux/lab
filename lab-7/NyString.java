@@ -24,9 +24,7 @@ public class NyString {
 	}
 
 	public String getFjernTegnString(String tegn) {
-		String skitString = "";
-		skitString = inputString.replaceAll(tegn, "");	// gode GUD saa digg replaceAll(String, String) var.. Mmmmm!
-		return skitString;
+		return inputString.replaceAll(tegn, "");		// gode GUD saa digg replaceAll(String, String) var.. Mmmmm!
 	}
 
 	public String getOriginalString() {

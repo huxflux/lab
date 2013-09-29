@@ -69,7 +69,7 @@ public class TekstBehandling {
 		return tempString.replaceAll(wordToReplace, replaceWord);
 	}
 
-	private String fjernSkilleTegn (String inputString) {				//fjerner skilltegn (!?., etc)
+	private String fjernSkilleTegn (String inputString) {				//fjerner skilletegn (!?., etc)
 			for (int i = 0; i < skilleTegn.length; i++) {
 				inputString = inputString.replace(Character.toString(skilleTegn[i]), "");
 			}
