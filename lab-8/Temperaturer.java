@@ -13,9 +13,9 @@ public class Temperaturer {
 	final int			HOURS_IN_DAY = 24;
 	private double[][] 	tempTabell = new double[DAYS_IN_MONTH][HOURS_IN_DAY];
 
-//	public Temperaturer(void blubb) {
-//		randomShit();
-//	}
+	public Temperaturer() {
+		randomShit();
+	}
 
 	public double[] middelTempHverDag() {
 		double[] tmp = new double[DAYS_IN_MONTH];
@@ -75,7 +75,7 @@ public class Temperaturer {
 		return dager;
 	}
 
-	public void randomShit() {
+	private void randomShit() {
 		Random random = new Random();
 
 		for (int i = 0; i < DAYS_IN_MONTH; i++) {
@@ -84,5 +84,4 @@ public class Temperaturer {
 			}
 		}
 	}
-
 }

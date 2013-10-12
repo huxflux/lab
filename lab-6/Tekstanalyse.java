@@ -59,6 +59,8 @@ public class Tekstanalyse {
 		double verdiAndreTegn = (double)antallTegn[29];
 		verdiAlleTegn += verdiAndreTegn;
 		return (verdiAndreTegn / verdiAlleTegn) * 100;
+
+//		return (((double)antallTegn[29]) / ((double)getTotaltAntallBokstaver() + (double)antallTegn[29])) * 100;
 	}
 
 	public int getAntallBestemtBokstav(char bokstav) {

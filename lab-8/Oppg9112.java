@@ -6,26 +6,24 @@
  * huxflux
  */
 
-import static javax.swing.JOptionPane.*;
 public class Oppg9112 {
 	public static void main(String[] args) {
 		final int			DAYS_IN_MONTH = 30;
 		final int			HOURS_IN_DAY = 24;
 
 		Temperaturer tempShit = new Temperaturer();
-		tempShit.randomShit();
 
 		double[] jegErLei = new double[DAYS_IN_MONTH];
 		jegErLei = tempShit.middelTempHverDag();
 
-		for (int i = 0; i < DAYS_IN_MONTH; i++) {
-			System.out.println("Dag " + i + ": " + jegErLei[i]);
+		for (int i = 1; i < DAYS_IN_MONTH+1; i++) {
+			System.out.println("Dag " + i + ": " + jegErLei[i-1]);
 		}
 
 		jegErLei = tempShit.middelTempHverTimeHverDag();
 
-		for (int i = 0; i < HOURS_IN_DAY; i++) {
-			System.out.println("Time " + i + ": " + jegErLei[i]);
+		for (int i = 1; i < HOURS_IN_DAY+1; i++) {
+			System.out.println("Time " + i + ": " + jegErLei[i-1]);
 		}
 
 		System.out.println("\nMiddeltemperatur for hele maaneden: " + tempShit.middelTempMaaned() + "\n");
