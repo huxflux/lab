@@ -22,7 +22,7 @@ class Vindu extends JFrame {
 
 class GrafikkEksempelOv1JOGL{
 	public static void main(String[] args) {
- 		Vindu etVindu = new Vindu("V2005 Øving 1: Enkel grafikk");
+ 		Vindu etVindu = new Vindu("V2005 Oving 1: Enkel grafikk");
  		etVindu.setVisible(true);
  	}
  }
@@ -51,11 +51,11 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
 
 	public void init(GLAutoDrawable glDrawable) {
  		GL gl = glDrawable.getGL(); //Get the GL object from glDrawable
- 		gl.glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Sets the background color to white
+ 		gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Sets the background color to white
 
  		gl.glMatrixMode(GL.GL_PROJECTION); // Select The Projection Matrix
  		gl.glLoadIdentity(); // Reset the view matrix to the identity matrix
- 		glu.gluPerspective(45.0,1.25,2.0,9.0); // Spesifize the projection matrix (fov, w/h, near plane, far plane)
+ 		glu.gluPerspective(60.0,1.0 , 1.0 ,9.0); // Spesifize the projection matrix (fov, w/h, near plane, far plane)
 
   		gl.glMatrixMode(GL.GL_MODELVIEW);
   	}
@@ -81,18 +81,19 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
   		GL gl = glDrawable.getGL();
   		gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
   		// and The Depth Buffer
-  		gl.glLoadIdentity(); 					// Reset The View matrix
-  		gl.glTranslatef(-3.0f,0.0f,-8.0f); 		// Flytter tegnepunket venstre 3 hakk og 8 hakk vekk fra kamera
-  		gl.glColor3f(0.0f,0.0f,0.0f); 			// setter fargen til svart
+  		gl.glLoadIdentity();
+  		gl.glTranslatef(-3.0f,0.0f,-8.0f);
+  		gl.glColor3f(1.0f,0.0f,0.0f);
 
-  		gl.glBegin(GL.GL_TRIANGLES);			// Starter å tegne et triangel
-  			gl.glVertex3f(0.0f, 1.0f, 0.0f);	// Topp
-  			gl.glVertex3f(-1.0f, -1.0f, 0.0f);	// Venstre bunn
-  			gl.glVertex3f(1.0f,-1.0f,0.0f);		// Høyre bunn
-  		gl.glEnd();								// Slutt tegning
+  		gl.glBegin(GL.GL_TRIANGLES);
+  			gl.glVertex3f(0.0f, 1.0f, 0.0f);
+  			gl.glVertex3f(-1.0f, -1.0f, 0.0f);
+  			gl.glVertex3f(1.0f,-1.0f,0.0f);
+  		gl.glEnd();
 
 		gl.glTranslatef(3.0f, 0.0f, 0.0f);
 
+		gl.glColor3f(0.0f, 1.0f, 0.0f);
 		gl.glBegin(GL.GL_TRIANGLES);
 			gl.glVertex3f(-1.0f, -1.0f, 0.0f);
 			gl.glVertex3f(-1.0f, 1.0f, 0.0f);
@@ -105,6 +106,7 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
 			gl.glVertex3f(1.0f, -1.0f, 0.0f);
 		gl.glEnd();
 
+		gl.glColor3f(0.0f, 0.0f, 1.0f);
 		gl.glTranslatef(3.0f, 0.0f, 0.0f);
 
 		gl.glBegin(GL.GL_LINE_LOOP);

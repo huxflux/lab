@@ -1,5 +1,9 @@
 /*
- * GrafikkEksempelOv1JOGL.java
+ * Oppg_1.java
+ *
+ * Blablablabla
+ *
+ * B0!
  */
 
 import java.awt.*; // klassene Color og Graphics
