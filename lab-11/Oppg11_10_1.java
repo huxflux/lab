@@ -21,14 +21,14 @@ public class Oppg11_10_1 {
 		test.setSkatteProsent(36);
 
 		testString = test.personalia.getFornavn() + " " + test.personalia.getEtternavn();
-		testString += "\n" + "Fodselsaar: " + Integer.toString(test.personalia.getFodselsAar());
-		testString += "\n" + "Arbeidstakernummer: " + Integer.toString(test.getArbTakerNr());
-		testString += "\n" + "Ansettelsesaar: " + Integer.toString(test.getAnsettelsesAar());
-		testString += "\n" + "Maanedslonn: " + Integer.toString(test.getMaanedsLonn());
-		testString += "\n" + "Skatteprosent: " + Double.toString(test.getSkatteProsent());
-		testString += "\n" + "Skattetrekk pr. maaned: " + Integer.toString(test.getSkattPrMaaned());
-		testString += "\n" + "Bruttolonn pr. aar: " + Integer.toString(test.getBruttoLonn());
-		testString += "\n" + "Skattetrekk pr. aar: " + Integer.toString(test.getSkattPrAar());
+		testString += "\n" + "Fodselsaar: " + test.personalia.getFodselsAar();
+		testString += "\n" + "Arbeidstakernummer: " + test.getArbTakerNr();
+		testString += "\n" + "Ansettelsesaar: " + test.getAnsettelsesAar();
+		testString += "\n" + "Maanedslonn: " + test.getMaanedsLonn();
+		testString += "\n" + "Skatteprosent: " + test.getSkatteProsent();
+		testString += "\n" + "Skattetrekk pr. maaned: " + test.getSkattPrMaaned();
+		testString += "\n" + "Bruttolonn pr. aar: " + test.getBruttoLonn();
+		testString += "\n" + "Skattetrekk pr. aar: " + test.getSkattPrAar();
 		testString += "\n" + "Navn paa formen wtf: ";
 		testString += "\n" + "Alder: " + test.getAlder();
 		testString += "\n" + "Antall aar i bedriften: " + test.getAntallAar();
