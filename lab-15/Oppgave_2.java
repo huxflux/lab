@@ -84,19 +84,33 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
   		gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
   		gl.glLoadIdentity(); 					// Reset The View matrix
   		gl.glColor3f(0.0f,1.0f,0.0f); 			// setter fargen til gr0nn!
-		gl.glTranslatef(-2.0f, 0.0f, -20.0f);
+		gl.glTranslatef(0.0f, 0.0f, -5.0f);
 
-		gl.glBegin(GL.GL_LINE_LOOP);
-		gl.glVertex3f(-1.0f, -1.0f, -1.0f);
-		gl.glVertex3f(1, 1, 1);
+	gl.glBegin(gl.GL_LINE_LOOP);
+	   gl.glVertex3f(-1.0f, 1.0f, 1.0f);
+	    gl.glVertex3f( 1.0f, 1.0f, 1.0f);
+	    gl.glVertex3f( 1.0f,-1.0f, 1.0f);
+	    gl.glVertex3f(-1.0f,-1.0f, 1.0f);
+	    gl.glEnd();
+	    gl.glBegin(gl.GL_LINE_LOOP);
+	    gl.glVertex3f(-1.0f, 1.0f,-1.0f);
+	    gl.glVertex3f( 1.0f, 1.0f,-1.0f);
+	    gl.glVertex3f( 1.0f,-1.0f,-1.0f);
+	    gl.glVertex3f(-1.0f,-1.0f,-1.0f);
+	    gl.glEnd();
 
-		gl.glEnd();
+	    gl.glBegin(gl.GL_LINE_LOOP);
+	    gl.glVertex3f( 1.0f, 1.0f,-1.0f);
+	    gl.glVertex3f( 1.0f, 1.0f, 1.0f);
+	    gl.glVertex3f( 1.0f,-1.0f, 1.0f);
+	    gl.glVertex3f( 1.0f,-1.0f,-1.0f);
+	    gl.glEnd();
 
-		gl.glScalef(2.15f, 2.15f, 1.0f);
-		gl.glTranslatef(5.0f, 0.0f, -20.0f);
-		gl.glRotatef(45.0f, 1, 1, 1);
-		GLUT glut = new GLUT();
-		glut.glutWireCube(2.0f);
-
+	    gl.glBegin(gl.GL_LINE_LOOP);
+	    gl.glVertex3f(-1.0f, 1.0f,-1.0f);
+	    gl.glVertex3f(-1.0f, 1.0f, 1.0f);
+	    gl.glVertex3f(-1.0f,-1.0f, 1.0f);
+	    gl.glVertex3f(-1.0f,-1.0f,-1.0f);
+	    gl.glEnd();
 	}
 }
