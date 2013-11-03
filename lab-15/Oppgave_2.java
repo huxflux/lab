@@ -56,8 +56,8 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
 
  		gl.glMatrixMode(GL.GL_PROJECTION); // Select The Projection Matrix
  		gl.glLoadIdentity(); // Reset the view matrix to the identity matrix
- 		glu.gluPerspective(80.0, 1.0, 0.0, 15.0); // Spesifize the projection matrix (fov, w/h, near plane, far plane)
-
+ 		glu.gluPerspective(80.0, 1.0, 0, -1.0); // Spesifize the projection matrix (fov, w/h, near plane, far plane)
+		glu.gluLookAt(0.0, 0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
   		gl.glMatrixMode(GL.GL_MODELVIEW);
   	}
 
@@ -84,7 +84,9 @@ class TegningOv1_1JOGL extends JPanel implements GLEventListener{
   		gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
   		gl.glLoadIdentity(); 					// Reset The View matrix
   		gl.glColor3f(0.0f,1.0f,0.0f); 			// setter fargen til gr0nn!
-		gl.glTranslatef(0.0f, 0.0f, -5.0f);
+		gl.glTranslatef(0.0f, 0.0f, 0.0f);
+		gl.glRotatef(45f, 1f, 1f, 1f);
+//		gl.glHint(GL.GL_PERSPECTIVE_CORRECTION_HINT, GL.GL_NICEST);
 
 	gl.glBegin(gl.GL_LINE_LOOP);
 	   gl.glVertex3f(-1.0f, 1.0f, 1.0f);

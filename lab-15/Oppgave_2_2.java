@@ -53,7 +53,7 @@
   		gl.glMatrixMode(GL.GL_PROJECTION); // Select The Projection Matrix
   		gl.glLoadIdentity(); // Reset the view matrix to the identity matrix
   		glu.gluPerspective(80.0, 1.0, 0.0, 15.0); // Spesifize the projection matrix (fov, w/h, near plane, far plane)
-glu. gluLookAt(0.0, 40.0, 30.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+        glu.gluLookAt(0.0, 0.0, 30.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
    		gl.glMatrixMode(GL.GL_MODELVIEW);
    	}
 
